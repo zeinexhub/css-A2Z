@@ -71,3 +71,27 @@ body {
   transform: scale(0.9, 0.9);
   filter: blur(3px);
 }
+
+.stars {
+  display: inline-block;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  font-size: 30px;
+  user-select: none;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.stars input :checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: rgb(150, 55, 157);
+}
